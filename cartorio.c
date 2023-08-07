@@ -117,55 +117,70 @@ int main()
 {
     int opcao=0; //Definindo a linguagem
     int laco=1;
+    char senhadigitada[]="a";
+    int comparacao;
 
-    for(laco= 1; laco= 1;)
+    printf("### Cartorio da Ebac ###\n\n");
+    printf("Login de administrador!\n\nDigite a sua senha: ");
+    scanf("%s",senhadigitada);
+
+    comparacao = strcmp(senhadigitada, "admin"); // Comparaçaõ da compatibilidade da senha.
+
+    if(comparacao == 0)
     {
 
-        system("clear");// Responsavel por limpar a tela para o ususario
-
-        
-
-        setlocale(LC_ALL, "Portuguese"); // inicio do menu
-
-        printf(" ### Cartorio da EBAC ### \n\n");// "\n" e usado para pular linha 
-        printf("Escolha a opção desejada do menu: \n\n");
-        printf("\t1 - Registras nomes\n");// "\t" e usado para dar um espaço do paragrafo
-        printf("\t2 - Consultar os nomes\n");
-        printf("\t3 - Deletar nomes\n\n"); 
-        printf("\t4 - Sair do sistema\n\n");
-        printf("Opcao:");// final do menu
-
-        scanf("%d", &opcao); // Armazenado a escolha do usuario 
-
-        system("clear");// Responsavel por limpar a tela para o ususario
-
-        switch (opcao) // Inicio da celeção do menu
-        {
-          case 1: 
-          registro(); // Chamada de funçoes.
-          break;
-
-          case 2: 
-          consulta();
-          break;
-
-          case 3: 
-          deletar();
-          break;
-
-          case 4:
-          printf("Obrigado por utilizar o sistema!\n");
-          return 0;
-          break;
-
-          default: 
-          printf("opcao incorreta \n");
-          system("read");
-          break;
-        }// Final da celeção do menu
-        
-        
-        
-    }
     
+
+        for(laco= 1; laco= 1;)
+        {
+
+            system("clear");// Responsavel por limpar a tela para o ususario
+
+        
+
+            setlocale(LC_ALL, "Portuguese"); // inicio do menu
+
+            printf(" ### Cartorio da EBAC ### \n\n");// "\n" e usado para pular linha 
+            printf("Escolha a opção desejada do menu: \n\n");
+            printf("\t1 - Registras nomes\n");// "\t" e usado para dar um espaço do paragrafo
+            printf("\t2 - Consultar os nomes\n");
+            printf("\t3 - Deletar nomes\n\n"); 
+            printf("\t4 - Sair do sistema\n\n");
+            printf("Opcao:");// final do menu
+
+            scanf("%d", &opcao); // Armazenado a escolha do usuario 
+
+            system("clear");// Responsavel por limpar a tela para o ususario
+
+            switch (opcao) // Inicio da celeção do menu
+            {
+                case 1: 
+                registro(); // Chamada de funçoes.
+                break;
+
+                case 2: 
+                consulta();
+                break;
+
+                case 3: 
+                deletar();
+                break;
+
+                case 4:
+                printf("Obrigado por utilizar o sistema!\n");
+                return 0;
+                break;
+
+                default: 
+                printf("opcao incorreta \n");
+                system("read");
+                break;
+            }// Final da celeção do menu
+             
+        }
+    } 
+
+    else
+        printf("Senha incorreta!");
+
 }
